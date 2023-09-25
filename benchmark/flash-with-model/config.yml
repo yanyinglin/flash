@@ -1,0 +1,151 @@
+version: 1.0
+provider:
+    name: openfaas
+    gateway: http://serverless.siat.ac.cn:31112
+
+functions:
+    
+    resnet-50-fwm:
+        namespace: flash
+        lang: flash
+        handler: ./resnet-50
+        image: k.harbor.siat.ac.cn/openfaas/gss-watchdog2-resnet-50-fwm:1.0.7
+        requests:
+            cpu: 1000m
+            memory: 3Gi
+        limits:
+            cpu: 2000m
+            memory: 4Gi
+        environment:
+            read_timeout: "30s"
+            write_timeout: "30s"
+            exec_timeout: "30s"
+            debug: "false"
+            infer_device: "cpu"
+    
+    resnet-101-fwm:
+        namespace: flash
+        lang: flash
+        handler: ./resnet-101
+        image: k.harbor.siat.ac.cn/openfaas/gss-watchdog2-resnet-101-fwm:1.0.7
+        requests:
+            cpu: 1000m
+            memory: 4Gi
+        limits:
+            cpu: 2000m
+            memory: 6Gi
+        environment:
+            read_timeout: "30s"
+            write_timeout: "30s"
+            exec_timeout: "30s"
+            debug: "false"
+            infer_device: "cpu"
+    
+    resnet-152-fwm:
+        namespace: flash
+        lang: flash
+        handler: ./resnet-152
+        image: k.harbor.siat.ac.cn/openfaas/gss-watchdog2-resnet-152-fwm:1.0.7
+        requests:
+            cpu: 1000m
+            memory: 4Gi
+        limits:
+            cpu: 2000m
+            memory: 6Gi
+        environment:
+            read_timeout: "30s"
+            write_timeout: "30s"
+            exec_timeout: "30s"
+            debug: "false"
+            infer_device: "cpu"
+            
+    vggnet-11-fwm:
+        namespace: flash
+        lang: flash
+        handler: ./vggnet-11
+        image: k.harbor.siat.ac.cn/openfaas/gss-watchdog2-vggnet-11-fwm:1.0.7
+        requests:
+            cpu: 1000m
+            memory: 3Gi
+        limits:
+            cpu: 2000m
+            memory: 4Gi
+        environment:
+            read_timeout: "30s"
+            write_timeout: "30s"
+            exec_timeout: "30s"
+            debug: "false"
+            infer_device: "cpu"
+    
+    shufflenet-fwm:
+        namespace: flash
+        lang: flash
+        handler: ./shufflenet
+        image: k.harbor.siat.ac.cn/openfaas/gss-watchdog2-shufflenet-fwm:1.0.7
+        requests:
+            cpu: 1000m
+            memory: 3Gi
+        limits:
+            cpu: 2000m
+            memory: 4Gi
+        environment:
+            read_timeout: "30s"
+            write_timeout: "30s"
+            exec_timeout: "30s"
+            debug: "false"
+            infer_device: "cpu"
+    
+    bert-fwm:
+        namespace: flash
+        lang: flash
+        handler: ./bert
+        image: k.harbor.siat.ac.cn/openfaas/gss-watchdog2-bert-fwm:1.0.7
+        requests:
+            cpu: 1000m
+            memory: 3Gi
+        limits:
+            cpu: 2000m
+            memory: 4Gi
+        environment:
+            read_timeout: "30s"
+            write_timeout: "30s"
+            exec_timeout: "30s"
+            debug: "false"
+            infer_device: "cpu"
+    
+    bert-qa-fwm:
+        namespace: flash
+        lang: flash
+        handler: ./bert-qa
+        image: k.harbor.siat.ac.cn/openfaas/gss-watchdog2-bert-qa-fwm:1.0.7
+        requests:
+            cpu: 1000m
+            memory: 3Gi
+        limits:
+            cpu: 2000m
+            memory: 4Gi
+        environment:
+            read_timeout: "30s"
+            write_timeout: "30s"
+            exec_timeout: "30s"
+            debug: "false"
+            infer_device: "cpu"
+    
+    labse-fwm:
+        namespace: flash
+        lang: flash
+        handler: ./labse
+        image: k.harbor.siat.ac.cn/openfaas/gss-watchdog2-labse-fwm:1.0.7
+        requests:
+            cpu: 1000m
+            memory: 4Gi
+        limits:
+            cpu: 2000m
+            memory: 6Gi
+        environment:
+            read_timeout: "30s"
+            write_timeout: "30s"
+            exec_timeout: "30s"
+            debug: "false"
+            infer_device: "cpu"
+    

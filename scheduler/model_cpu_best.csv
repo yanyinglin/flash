@@ -1,0 +1,9 @@
+model_name,best_cpu_num
+resnet-50-fwm,4
+resnet-101-fwm,5
+resnet-152-fwm,8
+vggnet-11-fwm,4
+shufflenet-fwm,4
+bert-qa-fwm,7
+bert-fwm,3
+labse-fwm,4

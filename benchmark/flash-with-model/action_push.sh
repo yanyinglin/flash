@@ -1,0 +1,1 @@
+faas-cli build --parallel 12  -f ./config.yml && faas-cli push --parallel 12 -f config.yml
